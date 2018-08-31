@@ -75,7 +75,7 @@
 			}
 			$this->setBalance($this->getBalance()+ $v);
 			$this->setStatus(true);
-			return "\n Bem-vindo Sr(a)".$this->getProprietor().", R$".$v." foram adicionados á sua conta. \n Total: R$".$this->getBalance()."</p>";
+			return "<br> Bem-vindo Sr(a)".$this->getProprietor().", R$".$v." foram adicionados á sua conta. <br> Total: R$".$this->getBalance()."</p>";
 		
 			//type da conta CC= conta corrente e CP= conta poupança
 			
@@ -93,7 +93,7 @@
 		{
 			if ($this->getStatus() == true){
 				$this->setBalance($this->getBalance() + $deposit);
-				return "<p>Deposito de R$".$deposit." efetuado com sucesso. \n<h4><font color='green'>saldo atual: R$".$this->getBalance()."</font></h4></p>";
+				return "<p>Deposito de R$".$deposit." efetuado com sucesso. <br><h4><font color='green'>saldo atual: R$".$this->getBalance()."</font></h4></p>";
 			}
 			
 		}
@@ -102,9 +102,9 @@
 		{
 			if ($this->getBalance() >= $loot && $this->getStatus() == true){
 				$this->setBalance($this->getBalance() - $loot);
-				return "<p>Saque de R$".$loot." efetuado com sucesso. \n<h4><font color='green'>saldo atual: R$".$this->getBalance()."</font></h4></p>";
+				return "<p>Saque de R$".$loot." efetuado com sucesso. <br><h4><font color='green'>saldo atual: R$".$this->getBalance()."</font></h4></p>";
 			}else
-				return "<p>saldo insuficiente.\n<h4><font color='green'>saldo atual R$".$this->getBalance()."</font></h4> </p>";
+				return "<p>saldo insuficiente.<br><h4><font color='green'>saldo atual R$".$this->getBalance()."</font></h4> </p>";
 		}
 		
 		public function payMonthly()
@@ -113,12 +113,12 @@
 				
 				case "cc":
 					$this->setBalance($this->getBalance() - 12.0);
-					return "<p><h4> Mensalidade bancaria \n <font color='red'>Total pago R$12,00</font><font color='green'> \n Total de saldo: R$".$this->getBalance()."</h4></font></p>";
+					return "<p><h4> Mensalidade bancaria <br> <font color='red'>Total pago R$12,00</font><font color='green'> <br> Total de saldo: R$".$this->getBalance()."</h4></font></p>";
 					break;
 					
 				case "cp":
 					$this->setBalance($this->getBalance() - 20.0);
-					return "<p><h4> Mensalidade bancaria \n <font color='red'>Total pago R$20,00</font><font color='green'> \n Total de saldo: R$".$this->getBalance()."</h4></font></p>";
+					return "<p><h4> Mensalidade bancaria <br> <font color='red'>Total pago R$20,00</font><font color='green'> <br> Total de saldo: R$".$this->getBalance()."</h4></font></p>";
 					break;
 			}
 		}

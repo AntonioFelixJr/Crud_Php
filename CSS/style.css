@@ -1,0 +1,13 @@
+body{
+	width: 920px;
+	padding: 15px;
+	margin: auto;
+
+}
+#principal{
+	padding: 10px;
+	text-align: justify;
+}
+pre{
+	font-size: 20px;
+}

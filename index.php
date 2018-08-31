@@ -2,9 +2,10 @@
     <head
         <meta charset="UTF-8">
         <title>Conta no Banco</title>
+        <link rel="stylesheet" href="CSS/style.css">
     </head>
     <body>
-        <pre>
+        <div id="principal">
 			<?php
 				require_once 'BankAccount.php';
 			 
@@ -29,11 +30,14 @@
 				echo $client2->draw(100);		
 				echo $client2->payMonthly();
 				//echo $cliente->closeAccount();
-			 
+			 	echo "<pre>";
 				var_dump($client);
+				echo "<br>";
+				echo "<br>";
 				var_dump($client2);
+			 	echo "</pre>";
 			 
 			?>
-        </pre>
+        </div>
     </body>
 </html>
