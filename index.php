@@ -7,7 +7,7 @@
     <body>
         <div id="principal">
 			<?php
-				require_once 'BankAccount.php';
+				//require_once 'BankAccount.php';
 			 
 				$client = new BankAccount();
 				$client->setNumAccount("1012235-2");
